@@ -1,0 +1,19 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.cat-card {
+  width: 300px;
+  background-color: black;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.cat-card img {
+  width: 100%;
+
+  object-fit: contain;
+}
