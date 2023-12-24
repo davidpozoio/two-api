@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
-import { CatWithImage } from "../models/CatModel";
+import { CatWithImage } from "../models/catModel";
+import { Card } from "antd";
 import { getCats } from "../services/catService";
 
 import "./catList.css";
+
+const { Meta } = Card;
 
 export function CatList() {
   //se define el estado inicial del array de gatos
@@ -24,10 +27,9 @@ export function CatList() {
       se agrega el hecho y la imagen que corresponde*/}
       {cats.map((cat, index) => {
         return (
-          <div key={index} className="cat-card">
-            <h1>{cat.fact}</h1>
-            <img src={cat.strDrinkThumb} alt="" />
-          </div>
+          <Card key={index} cover={<img src={cat.strDrinkThumb} alt="" />}>
+            <Meta title={cat.fact} />
+          </Card>
         );
       })}
     </div>

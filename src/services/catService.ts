@@ -1,4 +1,4 @@
-import { CatFactData, CatWithImage } from "../models/CatModel";
+import { CatFactData, CatWithImage } from "../models/catModel";
 import { getAllDrinks } from "./drinksService";
 
 //esta función retorna todos los hechos de gatos.
